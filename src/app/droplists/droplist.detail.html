@@ -1,0 +1,51 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Create New Droplist
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="droplistName">Droplist Name</label>
+                    <input id="droplistName" type="text" class="form-control" ng-model="droplistsDetailCtrl.droplist.droplistName">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="Department">Department</label>
+                    <input id="Department" type="text" class="form-control" ng-model="droplistsDetailCtrl.droplist.department">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="IsleNumber">Isle Number</label>
+                    <input id="IsleNumber" type="text" class="form-control" ng-model="droplistsDetailCtrl.droplist.isleNumber">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="IsleRow">Isle Row</label>
+                    <input id="IsleRow" type="text" class="form-control" ng-model="droplistsDetailCtrl.droplist.isleRow">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="IsleColumn">Isle Column</label>
+                    <input id="IsleColumn" type="text" class="form-control" ng-model="droplistsDetailCtrl.droplist.isleColumn">
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="DroplistDate">Droplist Date</label>
+                    <input id="DroplistDate" type="text" class="form-control" ng-model="droplistsDetailCtrl.droplist.droplistDate">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer clearfix">
+      <button class="btn btn-success pull-right" ng-click="customersDetailCtrl.save()">
+        Save <i class="glyphicon glyphicon-save"></i>
+      </button>
+    </div>
+</div>

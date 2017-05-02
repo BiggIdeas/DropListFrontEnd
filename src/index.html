@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+
+    <!-- inject:css -->
+    <!-- endinject -->
+
+  </head>
+  <body>
+    <div class="jumbotron">
+      this is great
+    </div>
+    <div ui-view></div>
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+
+    <!-- inject:js -->
+    <script src="app/app.module.js"></script>
+    <script src="app/buildings/buildings.module.js"></script>
+    <script src="app/core/core.module.js"></script>
+    <script src="app/drivers/drivers.module.js"></script>
+    <script src="app/driversDashboard/driversDashboard.module.js"></script>
+    <script src="app/droplists/droplist.module.js"></script>
+    <script src="app/stockers/stockers.module.js"></script>
+    <script src="app/stockers/stockersDashboard.module.js"></script>
+    <script src="app/core/buildings.factory.js"></script>
+    <script src="app/core/drivers.factory.js"></script>
+    <script src="app/core/droplists.factory.js"></script>
+    <script src="app/core/stockers.factory.js"></script>
+    <script src="app/core/users.factory.js"></script>
+    <script src="app/droplists/droplist.detail.controller.js"></script>
+    <script src="app/droplists/droplist.grid.controller.js"></script>
+    <script src="app/landing/landing.controller.js"></script>
+    <script src="app/stockers/stockers.controller.js"></script>
+    <script src="app/stockers/stockersDashboard.controller.js"></script>
+    <script src="app/test/test.controller.js"></script>
+    <!-- endinject -->
+  </body>
+
+</html>
