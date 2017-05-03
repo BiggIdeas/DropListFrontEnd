@@ -11,39 +11,53 @@
 
     <!-- inject:css -->
     <!-- endinject -->
-
+    <link rel="stylesheet" type="text/css" href="style/style.css">
   </head>
   <body>
-    <div class="jumbotron">
-      this is great
+    <div id="wrapper">
+      <header>
+        <div class="jumbotron">
+          <img src="Images/logo.png" alt="" class="src">
+        </div>
+      </header>
+      <div id="container">
+        <div ui-view></div>
+      </div>
+      <footer>
+        <hr>
+        <div class="grid ui">
+            <div class="col-md-4">
+              About Us
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+      </footer>
     </div>
-    <div ui-view></div>
+
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
     <!-- endbower -->
 
     <!-- inject:js -->
     <script src="app/app.module.js"></script>
-    <script src="app/buildings/buildings.module.js"></script>
     <script src="app/core/core.module.js"></script>
-    <script src="app/drivers/drivers.module.js"></script>
-    <script src="app/driversDashboard/driversDashboard.module.js"></script>
-    <script src="app/droplists/droplist.module.js"></script>
-    <script src="app/stockers/stockers.module.js"></script>
-    <script src="app/stockers/stockersDashboard.module.js"></script>
+    <script src="app/core/authentication.factory.js"></script>
+    <script src="app/core/authInterceptor.service.js"></script>
     <script src="app/core/buildings.factory.js"></script>
     <script src="app/core/drivers.factory.js"></script>
     <script src="app/core/droplists.factory.js"></script>
     <script src="app/core/stockers.factory.js"></script>
     <script src="app/core/users.factory.js"></script>
-    <script src="app/droplists/droplist.detail.controller.js"></script>
-    <script src="app/droplists/droplist.grid.controller.js"></script>
+    <script src="app/dashboard/dashboard.controller.js"></script>
+    <script src="app/droplist/droplist.detail.controller.js"></script>
+    <script src="app/droplist/droplist.grid.controller.js"></script>
     <script src="app/landing/landing.controller.js"></script>
-    <script src="app/stockers/stockers.controller.js"></script>
-    <script src="app/stockers/stockersDashboard.controller.js"></script>
+    <script src="app/login/login.controller.js"></script>
+    <script src="app/register/register.controller.js"></script>
     <script src="app/test/test.controller.js"></script>
     <!-- endinject -->
   </body>

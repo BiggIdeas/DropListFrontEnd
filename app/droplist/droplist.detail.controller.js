@@ -2,13 +2,13 @@
     'use strict';
 
     angular
-        .module('app.droplists')
-        .controller('droplistsDetailController', droplistsDetailController);
+        .module('app.core')
+        .controller('DroplistDetailController', DroplistDetailController);
 
-    droplistsDetailController.$inject = ['droplistsFactory', '$stateParams', 'SweetAlert'];
+    DroplistDetailController.$inject = ['droplistsFactory', '$stateParams', 'SweetAlert'];
 
     /* @ngInject */
-    function droplistsDetailController(droplistsFactory, stateParams, SweetAlert) {
+    function DroplistDetailController(droplistsFactory, stateParams, SweetAlert) {
         var vm = this;
         vm.save = save;
         vm.title = "View Droplists";

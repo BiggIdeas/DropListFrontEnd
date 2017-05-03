@@ -3,14 +3,14 @@
 
     angular
         .module('app.core')
-        .controller('TestController', TestController);
+        .controller('DroplistGridController', DroplistGridController);
 
-    TestController.$inject = [];
+        DroplistGridController.$inject = ['droplistsFactory'];
 
     /* @ngInject */
-    function TestController() {
+    function DroplistGridController(droplistsFactory) {
         var vm = this;
-        vm.test = "test";
+
         activate();
 
         function activate() {
