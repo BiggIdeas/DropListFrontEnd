@@ -5,12 +5,12 @@
         .module('app.core')
         .controller('LandingController', LandingController);
 
-    LandingController.$inject = ["$stateParams"];
+    LandingController.$inject = [];
 
     /* @ngInject */
-    function LandingController($stateParams) {
+    function LandingController() {
         var vm = this;
-        vm.landing = "test";
+        vm.landing = "im landing html";
         activate();
 
         function activate() {

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.droplists')
+        .module('app.core')
         .controller('DroplistsGridController', DroplistsGridController);
 
         DroplistsGridController.$inject = ['droplistsFactory'];

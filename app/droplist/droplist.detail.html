@@ -1,0 +1,57 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Create New Droplist
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="droplistName">Droplist Name</label>
+                    <input id="droplistName" type="text" class="form-control" ng-model="droplistDetailCtrl.droplist.droplistName">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="Department">Department</label>
+                    <input id="Department" type="text" class="form-control" ng-model="droplistDetailCtrl.droplist.department">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="Section">Section</label>
+                    <input id="Section" type="text" class="form-control" ng-model="droplistDetailCtrl.droplist.section">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="AisleNumber">Aisle Number</label>
+                    <input id="AisleNumber" type="text" class="form-control" ng-model="droplistDetailCtrl.droplist.aisleNumber">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="AisleRow">Aisle Row</label>
+                    <input id="AisleRow" type="text" class="form-control" ng-model="droplistDetailCtrl.droplist.aisleRow">
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="AisleColumn">Aisle Column</label>
+                    <input id="AisleColumn" type="text" class="form-control" ng-model="droplistDetailCtrl.droplist.aisleColumn">
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div class="form-group">
+                    <label for="DroplistDate">Droplist Date</label>
+                    <input id="DroplistDate" type="text" class="form-control" ng-model="droplistDetailCtrl.droplist.createdOnDate">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer clearfix">
+      <button class="btn btn-success pull-right" ng-click="droplistDetailCtrl.save()">
+        Save <i class="glyphicon glyphicon-save"></i>
+      </button>
+    </div>
+</div>
