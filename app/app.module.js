@@ -34,20 +34,10 @@
           controller: 'DashboardController as dashboardCtrl',
           templateUrl: 'app/dashboard/dashboard.html'
         })
-        .state('app.stockersDashboard', {
-          url: '/stockersDashboard',
-          controller: 'StockersDashboardController as stockersDashboardCtrl',
-          templateUrl: 'app/stockers/stockersDashboard.html'
-        })
-        .state('app.driversDashboard', {
-          url: '/driversDashboard',
-          controller: 'driversDashboardController as driversDashboardCtrl',
-          templateUrl: 'app/drivers/driversDashboard.html'
-        })
         .state('app.droplist', {
           url: '/droplist',
           abstract: true,
-          templateUrl: '<div ui-view></div>'
+          template: '<div ui-view></div>'
         })
         .state('app.droplist.detail', {
           url: '/detail/:id',

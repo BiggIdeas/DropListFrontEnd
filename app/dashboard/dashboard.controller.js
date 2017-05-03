@@ -5,10 +5,10 @@
         .module('app.core')
         .controller('DashboardController', DashboardController);
 
-    DashboardController.$inject = [];
+    DashboardController.$inject = ['$stateParams'];
 
     /* @ngInject */
-    function DashboardController() {
+    function DashboardController($stateParams) {
         var vm = this;
 
         activate();
