@@ -20,15 +20,15 @@
         <div class="form-group">
           <label for="Section">Department</label>
           <select class="form-control" ng-options="department.departmentName for department in droplistDetailCtrl.departments" ng-model="droplistDetailCtrl.selectedDepartment" ng-change="droplistDetailCtrl.filterSections()">
-                    <option value="">- Select department -</option>
-                  </select>
+            <option value="" disabled selected>- Select department -</option>
+          </select>
         </div>
       </div>
       <div class="col-xs-6">
         <div class="form-group">
           <label for="AisleNumber">Section</label>
           <select class="form-control" ng-options="section.sectionName for section in droplistDetailCtrl.departmentSections" ng-model="droplistDetailCtrl.droplist.selectedSection">
-            <option value="">- Select section -</option>
+            <option value="" disabled selected>- Select section -</option>
           </select>
         </div>
       </div>
