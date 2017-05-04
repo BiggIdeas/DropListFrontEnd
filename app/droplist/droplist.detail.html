@@ -1,66 +1,82 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">
-        Create New Droplist
-    </div>
-    <div class="panel-body">
-        <div class="row">
-          <div class="col-xs-6">
-              <div class="form-group">
-                  <label for="droplistName">Droplist Name</label>
-                  <input id="droplistName" type="text" class="form-control" ng-model="droplistDetailCtrl.droplist.droplistName">
-              </div>
-          </div>
-          <div class="col-xs-6">
-              <div class="form-group">
-                  <label for="Department">Date</label>
-                  <input id="Department" type="text" class="form-control" ng-model="droplistDetailCtrl.droplist.createdDate">
-              </div>
-          </div>
-          <div class="col-xs-6">
-              <div class="form-group">
-                  <label for="Section">Department</label>
-                  <select class="form-control" ng-options="department.departmentName for department in droplistDetailCtrl.departments" ng-model="droplistDetailCtrl.selectedDepartment" ng-change="droplistDetailCtrl.filterSections()">
+  <div class="panel-heading">
+    Create New Droplist
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="form-group">
+          <label for="droplistName">Droplist Name</label>
+          <input id="droplistName" type="text" class="form-control" ng-model="droplistDetailCtrl.droplist.droplistName">
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="form-group">
+          <label for="Department">Date</label>
+          <input id="Department" type="text" class="form-control" ng-bind="droplistDetailCtrl.droplist.createdOnDate | date: 'shortDate' ">
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="form-group">
+          <label for="Section">Department</label>
+          <select class="form-control" ng-options="department.departmentName for department in droplistDetailCtrl.departments" ng-model="droplistDetailCtrl.selectedDepartment" ng-change="droplistDetailCtrl.filterSections()">
                     <option value="">- Select department -</option>
                   </select>
-                  <!-- <input id="Section" type="text" class="form-control" ng-model="droplistDetailCtrl.droplist.department"> -->
-              </div>
-          </div>
-          <div class="col-xs-6">
-              <div class="form-group">
-                  <label for="AisleNumber">Section</label>
-                  <select class="form-control" ng-options="section.sectionName for section in droplistDetailCtrl.departmentSections" ng-model="droplistDetailCtrl.selectedSection">
-                    <option value="">- Select section -</option>
-                  </select>
-              </div>
-          </div>
         </div>
-
-
-        <div class="row">
-            <div class="col-xs-6">
-                <div class="form-group">
-                    <label for="AisleRow">Aisle Row</label>
-                    <input id="AisleRow" type="text" class="form-control" ng-model="droplistDetailCtrl.droplist.aisleRow">
-                </div>
-            </div>
-            <div class="col-xs-6">
-                <div class="form-group">
-                    <label for="AisleColumn">Aisle Column</label>
-                    <input id="AisleColumn" type="text" class="form-control" ng-model="droplistDetailCtrl.droplist.aisleColumn">
-                </div>
-            </div>
-
-            <div class="col-xs-6">
-                <div class="form-group">
-                    <label for="DroplistDate">Droplist Date</label>
-                    <input id="DroplistDate" type="text" class="form-control" ng-model="droplistDetailCtrl.droplist.createdOnDate">
-                </div>
-            </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="form-group">
+          <label for="AisleNumber">Section</label>
+          <select class="form-control" ng-options="section.sectionName for section in droplistDetailCtrl.departmentSections" ng-model="droplistDetailCtrl.droplist.selectedSection">
+            <option value="">- Select section -</option>
+          </select>
         </div>
+      </div>
     </div>
-    <div class="panel-footer clearfix">
-      <button class="btn btn-success pull-right" ng-click="droplistDetailCtrl.save()">
-        Save <i class="glyphicon glyphicon-save"></i>
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-success pull-right" ng-click="droplistDetailCtrl.save()">
+          Save <i class="glyphicon glyphicon-save"></i>
+        </button>
+      </div>
+      <div class="col-xs-12">
+        <table class="table table-stripped">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Aisle Number</th>
+              <th>Row</th>
+              <th>Column</th>
+              <th>Item Number</th>
+              <th>Description</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="droplistItem in droplistDetailCtrl.droplist.droplistItems">
+              <td>{{$index+1}}</td>
+              <td><input type="number" class="form-control" ng-model="droplistItem.aisleNumber"></input>
+              </td>
+              <td><input type="text" class="form-control" ng-model="droplistItem.aisleRow"></input>
+              </td>
+              <td><input type="number" class="form-control" ng-model="droplistItem.aisleColumn"></input>
+              </td>
+              <td><input type="number" class="form-control" ng-model="droplistItem.itemNumber"></input>
+              </td>
+              <td><input type="text" class="form-control" ng-model="droplistItem.description"></input>
+              </td>
+              <td><input type="number" class="form-control" ng-model="droplistItem.quantity"></input>
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer clearfix">
+    <button class="btn btn-success pull-right" ng-click="droplistDetailCtrl.addItem()">
+        <i class="glyphicon glyphicon-plus"></i> Add Item
       </button>
-    </div>
+  </div>
 </div>
